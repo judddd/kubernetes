@@ -127,7 +127,7 @@ spec:
       serviceAccountName: metrics-server
       containers:
       - name: metrics-server
-        image: k8s.gcr.io/metrics-server-amd64:v0.3.1
+        image: registry.cn-hangzhou.aliyuncs.com/ccgg/metrics-server-amd64:v0.3.1 
         imagePullPolicy: IfNotPresent
         command:
         - /metrics-server
@@ -139,7 +139,7 @@ spec:
           name: https
           protocol: TCP
       - name: metrics-server-nanny
-        image: k8s.gcr.io/addon-resizer:1.8.4
+        image: registry.cn-hangzhou.aliyuncs.com/k8s-addons/addon-resizer:v1.8.3 
         imagePullPolicy: IfNotPresent
         resources:
           limits:
